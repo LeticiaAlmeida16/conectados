@@ -1,17 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Button } from './components/Button';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { NewRoom } from './pages/NewRoom';
+import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
   return (
-    <div>
-      <h1>FOI FOI FOI</h1>
-      <Button/>
-      <Button/>      
-      <Button/>  
-    </div>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rooms/new" element={<NewRoom />} />
+        </Routes>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
-
 export default App;
