@@ -11,12 +11,16 @@ type User = {
 
 type AuthContextType = {
     user: User | undefined;
-    singInWithGoogle: () => Promise<void>;
+    signInWithGoogle: () => Promise<void>;
+}
+
+type AuthContextProviderProps = {
+    children: ReactNode;
 }
 
 export const AuthContext = createContext({} as AuthContextType);
 
-export function AuthContextProvider(props: { children: React.ReactNode }) {
+export function AuthContextProvider({ children }: AuthContextProviderProps) {
     const [user, setUser] = useState<User>();
 
     useEffect(() => {
@@ -41,7 +45,7 @@ export function AuthContextProvider(props: { children: React.ReactNode }) {
     }, []);
 
 
-    async function singInWithGoogle() {
+    async function signInWithGoogle() {
         const provider = new firebase.auth.GoogleAuthProvider()
         const result = await firebase.auth().signInWithPopup(provider)
 
@@ -59,7 +63,9 @@ export function AuthContextProvider(props: { children: React.ReactNode }) {
         }
     }
     return (
-        <AuthContext.Provider value={{ user, singInWithGoogle }}></AuthContext.Provider>
+        <AuthContext.Provider value={{ user, signInWithGoogle }}>
+            {children}
+        </AuthContext.Provider>
 
     );
 }
