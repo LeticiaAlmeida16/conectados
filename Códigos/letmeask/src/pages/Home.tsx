@@ -37,6 +37,11 @@ export function Home() {
       return
     }
 
+    if (roomRef.val().endedAt) {
+      alert('Sala já foi encerrada.')
+      return
+    }
+
     navigate(`/rooms/${roomCode}`) // ✅ v6
   }
 
