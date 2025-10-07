@@ -2,6 +2,7 @@
 repositório destinado aos projetos dos conectados
 
 ## Letmeask
+https://letmeask-c2777.web.app/
 
 Este projeto é uma aplicação web de **Perguntas e Respostas em tempo real**, onde criadores de conteúdo podem organizar salas virtuais para interagir com sua audiência.
 
