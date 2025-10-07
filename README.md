@@ -8,10 +8,15 @@ Este projeto é uma aplicação web de **Perguntas e Respostas em tempo real**, 
 ### Funcionalidades
 
 **Autenticação**: Login de usuário via Google (Firebase Auth).
+
 **Criação de Salas**: Usuários logados podem criar novas salas de Q&A.
+
 **Entrada em Salas**: Participantes podem entrar em salas existentes usando um código.
+
 **Envio de Perguntas**: Participantes podem enviar perguntas para o criador.
+
 **Curtir Perguntas**: Os participantes podem curtir as perguntas, indicando relevância.
+
 **Modo Administrador**: O criador da sala (administrador) pode:
     * Encerrar a sala.
     * Marcar perguntas como respondidas.
@@ -21,9 +26,13 @@ Este projeto é uma aplicação web de **Perguntas e Respostas em tempo real**, 
 ### Tecnologias
 
 **ReactJS**
+
 **TypeScript**
+
 **Firebase Realtime Database** (para backend e banco de dados em tempo real)
+
 **Firebase Authentication** (para autenticação via Google)
+
 **SCSS** (para estilização)
 
 ### Como rodar o projeto
