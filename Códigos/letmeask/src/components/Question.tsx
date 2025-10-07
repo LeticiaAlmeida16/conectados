@@ -22,7 +22,7 @@ export function Question(
             className={cx(
                 'question',
                 { answered: isAnswered },
-                { Highlight: isHighlighted && isAnswered },
+                { highlighted: isHighlighted }, // correto: nome da classe CSS e sem condicionar ao answered
             )}
         >
             <p>{content}</p>
